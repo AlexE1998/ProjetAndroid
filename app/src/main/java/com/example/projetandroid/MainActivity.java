@@ -2,24 +2,49 @@ package com.example.projetandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
-import android.view.View.OnClickListener;
+import android.util.Log;
 import android.widget.Button;
-import android.widget.Toast;
+import android.widget.TextView;
+import android.content.Intent;
+
+import android.view.View;
+import android.widget.Button;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.net.URL;
 
 public class MainActivity extends AppCompatActivity {
-//teeeeeeeeeeeeest
+    //Page d'acceuil
+    private TextView mBvnText;
+    private Button mConnexionButton;
+    private Intent i;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        Button Button1=(Button1) findViewById(R.id.button);
-        Button Button2=(Button2) findViewById(R.id.button2);
-        Button Button3=(Button3) findViewById(R.id.button3);
-        Button Button4=(button4) findViewById(R.id.button4);
-        Button1.setOnClickListener(btnclick);
-        Button2.setOnClickListener(btnclick);
-        Button3.setOnClickListener(btnclick);
-        Button4.setOnClickListener(btnclick);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //
+        mBvnText = findViewById(R.id.activity_main_bvn_txt);
+
+        mConnexionButton = findViewById(R.id.activity_main_connexion_btn);
+
+        Button identification=(Button) findViewById(R.id.activity_main_connexion_btn);
+
+        i = new Intent(getApplicationContext(), com.example.projetandroid.IdentificationActivity.class);
+        startActivity(i);
+        identification.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                finish();
+
+            }
+        });
+
+
+
     }
 }
