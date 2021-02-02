@@ -1,7 +1,3 @@
 <resources>
-    <string name="app_name">ProjetAndroid</string>
-    <string name="msg_bact1">Activité 1</string>
-    <string name="msg_bact2">Activité 2</string>
-    <string name="msg_bact3">Activité 3</string>
-    <string name="msg_bact4">Activité 4</string>
+    <string name="app_name">zeproject</string>
 </resources>
