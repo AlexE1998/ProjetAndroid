@@ -29,10 +29,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //
-        mBvnText = findViewById(R.id.activity_main_bvn_txt);
-
-        mConnexionButton = findViewById(R.id.activity_main_connexion_btn);
-
         Button identification=(Button) findViewById(R.id.activity_main_connexion_btn);
 
         i = new Intent(getApplicationContext(), com.example.projetandroid.IdentificationActivity.class);
@@ -44,7 +40,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button appli=(Button) findViewById(R.id.activity_main_appli_btn);
+        i = new Intent(getApplicationContext(), com.example.projetandroid.AppliActivity.class);
+        startActivity(i);
+        appli.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                finish();
 
+            }
+        });
 
     }
 }
